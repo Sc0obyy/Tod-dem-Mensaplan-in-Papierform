@@ -26,8 +26,66 @@ body {
 }
 
 .day-selector-button {
-  font-size: 5vw;
+  font-size: 4vw;
+  background-color: transparent;
+  padding: 10px;
+  border-top: 0;
 }
+
+.day-selector-button:hover, .day-selector-button:focus {
+  background-color: lightgrey;
+}
+
+.day-selection-dropdown {
+  background-color: #f1f1f1;
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+}
+
+.day-selection-dropdown button {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 4vw;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.day-selection-dropdown button:hover {
+  background-color: lightgray;
+}
+
+.filter-selector:hover, .filter-selector:focus {
+  background-color: rgb(38, 189, 239);
+}
+
+.filter-selection-dropdown button:hover {
+  background-color: lightgray;
+}
+
+.filter-selection-dropdown {
+  margin-left: 2vw;
+  background-color: #f1f1f1;
+  display: none;
+  position: absolute;
+  border: 1px solid black;
+}
+
+.filter-selection-dropdown button {
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5vw;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+
+.show {display: block;}
 
 .filter-bar {
   margin-top: 10px;
@@ -35,9 +93,15 @@ body {
 }
 
 .filter-selector {
-  font-size: 2vw;
+  font-size: 1.5vw;
   width: auto;
   margin-left: 2vw;
+  padding: 5px 25px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  background-color: #008cba;
 }
 
 .filters-list {

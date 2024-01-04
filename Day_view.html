@@ -15,14 +15,30 @@
   </div>
   <div class="main-body">
     <div class="day-selection">
-      <button class="day-selector-button">Montag</button>
+      <button onclick="displayDropdown('day-selection-dropdown')" id="day-selector-button" class="day-selector-button dropdown-button">Montag</button>
+      <div id="day-selection-dropdown" class="day-selection-dropdown">
+        <button onclick="displayDay('Montag')">Montag</button>
+        <button onclick="displayDay('Dienstag')">Dienstag</button>
+        <button onclick="displayDay('Mittwoch')">Mittwoch</button>
+        <button onclick="displayDay('Donnerstag')">Donnerstag</button>
+        <button onclick="displayDay('Freitag')">Freitag</button>
+      </div>
     </div>
     <div class="filter-bar">
-      <button class="filter-selector">Select Filter</button>
-      <ul class="filters-list">
-        <li class="selected-filter">Vegan</li>
+      <button onclick="displayDropdown('filter-selection-dropdown')" class="filter-selector dropdown-button">Select Filter</button>
+      <div id="filter-selection-dropdown" class="filter-selection-dropdown dropdown">
+        <button onclick="addFilter('Meine Vorlieben')">Mein Vorlieben</button>
+        <button onclick="addFilter('Keine Nüsse')">Keine Nüsse</button>
+        <button onclick="addFilter('Vegan')">Vegan</button>
+        <button onclick="addFilter('Vegetarisch')">Vegetarisch</button>
+        <button onclick="addFilter('Glutenfrei')">Glutenfrei</button>
+        <button onclick="addFilter('Laktosefrei')">Laktosefrei</button>
+        <button onclick="addFilter('High Protein')">High Protein</button>
+      </div>
+      <ul id="filter-list" class="filters-list">
+        <!-- <li class="selected-filter">Vegan</li>
         <li class="selected-filter">No Nuts</li>
-        <li class="selected-filter">High Protein</li>
+        <li class="selected-filter">High Protein</li> -->
       </ul>
     </div>
     <div class="dishes">
