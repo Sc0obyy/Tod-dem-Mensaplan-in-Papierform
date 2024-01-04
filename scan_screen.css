@@ -1,0 +1,38 @@
+.flex_main_column{
+  	 display: flex;
+ 	 flex-direction: column;
+ 	 justify-content: space-between;
+ 	 align-items: center;
+ 	 height: 100vh;
+  }
+  .start_heading{
+  	font-size: 80px; 
+  	font-family: Arial, Helvetica, sans-serif;
+  	border: solid;
+  }
+  .spacer{
+  	height: 10vh;
+  }
+  .start_login{
+  	display:flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+  	font-size: 30px; 
+  	font-family: Arial, Helvetica, sans-serif;
+  }
+  .start_login_scan{
+  	display: flex;
+  	flex-direction: column;
+  	width:80vh;
+  	align-items: center;
+  }
+  .start_login_guest{
+  	display: flex;
+  	flex-direction: row; 
+  	display: flex;
+  	width: 80vh;
+  	align-items: center;
+  	justify-content: center;
+  	border: solid;
+  	border-color: rgb(0,84,156);
+  }
