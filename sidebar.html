@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="sidebar.css">
+	<script src="popup_balance.js"></script>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
 				<div class="sidebar_bal">
 					<div class="sidebar_bal_head_button">
 						<p1 style="font-size: 50px; font-family: Arial, Helvetica, sans-serif;">Saldo</p1>
-						<p1 style="font-size: 50px; margin-left: 20px; font-family: Arial, Helvetica, sans-serif; border: solid; border-color: rgb(0,84,156); border-width: thick;">+</p1>
+						<button onclick="openPopup()" style="font-size: 50px; margin-left: 20px; font-family: Arial, Helvetica, sans-serif; border: solid; border-color: rgb(0,84,156); border-width: thick;">+</button>
 					</div>
 					<div class="sidebar_bal_spacer">	</div>
 					<div class="sidebar_bal_display">
@@ -49,6 +50,23 @@
 			</div>
 		
 	</div>
+	
+	<div class="sidebar_overlay_bal" id="sidebar_overlay_bal">
+    	<div class="sidebar_popup_bal">
+    		<div>
+    			<button onclick="closePopup()">X</button>
+    			<h1 class="sidebar_popup_bal_flex">Konto aufladen</h1>
+    				<div class="sidebar_popup_bal_flex_choices">
+    					<button onclick="closePopup()" style="height:10vh;width:15vh;font-size: 35px;"> 5€</button>
+    					<button onclick="closePopup()" style="height:10vh;width:15vh;font-size: 35px;"> 10€</button>
+    					<button onclick="closePopup()" style="height:10vh;width:15vh;font-size: 35px;"> 20€</button>
+    				</div>
+    			<img src="resources/scan_pic.jpg" class="sidebar_popup_bal_flex">
+    		</div>
+    	</div>
+  	</div>
+	
+	
 </body>
 
 </html>
