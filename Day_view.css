@@ -193,3 +193,7 @@ body {
 .card-dish-preis {
   margin-right: 10px;
 }
+
+.appliedFilter {
+  filter: grayscale(0.8);
+}

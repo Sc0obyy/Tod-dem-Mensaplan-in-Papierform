@@ -1,5 +1,4 @@
 var filterArray = [];
-// "Meine Vorlieben", "Keine Nüsse", "Vegan", "Vegetarisch", "Glutenfrei", "Laktosefrei", "High Protein", "Mit Fleisch"
 
 function displayDropdown(id) {
   document.getElementById(id).classList.toggle("show");
@@ -22,30 +21,40 @@ function displayDay(day) {
   document.getElementById("day-selector-button").innerHTML = day;
 }
 
+renderCards();
+
 function addFilter(filter) {
+  var myList = document.getElementById("filter-list");
   if (!filterArray.includes(filter)) {
     filterArray.push(filter);
     const node = document.createElement("li");
     const textNode = document.createTextNode(filter);
     node.classList.add("selected-filter");
     node.appendChild(textNode);
-    document.getElementById("filter-list").appendChild(node);
+    myList.appendChild(node);
     
   } else {
     const itemIndex = filterArray.indexOf(filter);
     if (itemIndex > -1) {
       filterArray.splice(itemIndex, 1);
     }
-    var myList = document.getElementById("filter-list");
     myList.querySelectorAll('li').forEach(function (item) {
       if (item.innerHTML === filter) {
         item.remove();
       }
     })
   }
+  removeCards();
+  
+  renderCards();
 }
 
-
+function removeCards() {
+  const myNode = document.getElementById("dishes-list");
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.lastChild);
+  }
+}
 
 function addIconList(arr) {
   let string = ""
@@ -60,7 +69,7 @@ function createCard(dish) {
   const cardContainer = document.getElementById("dishes-list");
 
   cardContainer.innerHTML += `
-  <li class="dish-card">
+  <li id="${dish.name}" class="dish-card">
     <div class="card-image">
       ${dish.imageURL}
     </div>
@@ -81,8 +90,30 @@ function createCard(dish) {
   `
 }
 
-for (let i = 0; i < mondayDishes.length; i++) {
-  createCard(mondayDishes[i]);
+
+
+function renderCards() {
+  let sortedFilterArray = [];
+  let indexCounter = 0;
+
+  for (let i = 0; i < mondayDishes.length; i++) {
+    if (filterArray.every(filter => mondayDishes[i].Filter.includes(filter))) {
+      sortedFilterArray.unshift(mondayDishes[i]);
+      indexCounter += 1;
+    } else {
+      sortedFilterArray.push(mondayDishes[i]);
+
+    }
+  }
+  sortedFilterArray.forEach(e => {
+    createCard(e);
+    if (indexCounter > 0) {
+      indexCounter -= 1;
+    }
+    else {
+      document.getElementById(e.name).classList.toggle("appliedFilter");
+    }
+  })
 }
 
 
