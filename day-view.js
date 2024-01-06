@@ -17,6 +17,15 @@ window.onclick = function (event) {
   }
 }
 
+function clearFilterArray() {
+  filterArray = [];
+  removeCards();
+  renderCards();
+  document.getElementById("filter-list").querySelectorAll('li').forEach(function (item) {
+      item.remove();
+  })
+}
+
 function displayDay(day) {
   document.getElementById("day-selector-button").innerHTML = day;
 }
@@ -45,7 +54,6 @@ function addFilter(filter) {
     })
   }
   removeCards();
-  
   renderCards();
 }
 

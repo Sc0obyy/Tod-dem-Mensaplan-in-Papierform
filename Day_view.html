@@ -11,7 +11,7 @@
 
 <body>
   <div id="sidebar" class="sidebar">
-    <p>Sidebar</p>
+    <p>sidebar</p>
   </div>
   <div class="main-body">
     <div class="day-selection">
@@ -25,7 +25,10 @@
       </div>
     </div>
     <div class="filter-bar">
-      <button onclick="displayDropdown('filter-selection-dropdown')" class="filter-selector dropdown-button">Select Filter</button>
+      <div>
+        <button onclick="displayDropdown('filter-selection-dropdown')" class="filter-selector dropdown-button">Select Filter</button>
+        <button onclick="clearFilterArray()" class="clear-filter-button">Clear Filters</button>
+      </div>
       <div id="filter-selection-dropdown" class="filter-selection-dropdown dropdown">
         <button onclick="addFilter('Meine Vorlieben')">Mein Vorlieben</button>
         <button onclick="addFilter('Keine Nüsse')">Keine Nüsse</button>

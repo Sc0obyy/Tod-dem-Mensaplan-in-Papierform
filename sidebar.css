@@ -1,58 +1,71 @@
- html, body {
-  	height: 100%;
-	}
-  .flex_main_rows{
-  	display: flex;
-  	flex-direction: row;
-  	justify-content: space-between;
-  	height: 100vh;
-  }
-  .sidebar_flex_column{
-  	display:flex;
-  	flex-direction: column;
-  	max-width: 40vh;
-  	justify-content: space-between;
-  	flex:1;
-  	padding: 10px;
-  	border-right: 3px solid gray;
-  }
-  .sidebar_c_name{
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  }
-  .sidebar_pref{
-  	display: flex;
-  	flex-direction: column;
-  	align-items: center;
-  }
-  .sidebar_pref_spacer{
-  	height: 1vh;
-  }
-  .sidebar_pref_preview{
-  	font-size: 30px;
-  	font-family: Arial, Helvetica, sans-serif;
-  	border: solid;
-  	border-color: rgb(0,84,156);
-  	border-width: thick;
-  }
-  .sidebar_bal{
-  	display: flex;
-  	justify-content: center;
-  	flex-direction: column;
-  	align-items: center;
-  }
-  .sidebar_bal_head_button{
-  	display: flex;
-  	justify-content: center;
-  	flex-direction: row;
-  }
-  .sidebar_bal_spacer{
-  	height: 3vh;
-  }
-  .sidebar_spacer{
- 	 height: 3vh;
-  }
-  .sidebar_lang{
-  	display: flex;
-  	justify-content: center;
+ html,
+ body {
+   height: 100%;
+ }
+
+ .flex_main_rows {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   height: 100vh;
+ }
+
+ .sidebar_flex_column {
+   display: flex;
+   flex-direction: column;
+   max-width: 40vh;
+   justify-content: space-between;
+   flex: 1;
+   padding: 10px;
+   border-right: 3px solid gray;
+ }
+
+ .sidebar_c_name {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .sidebar_pref {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .sidebar_pref_spacer {
+   height: 1vh;
+ }
+
+ .sidebar_pref_preview {
+   font-size: 30px;
+   font-family: Arial, Helvetica, sans-serif;
+   border: solid;
+   border-color: rgb(0, 84, 156);
+   border-width: thick;
+ }
+
+ .sidebar_bal {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .sidebar_bal_head_button {
+   display: flex;
+   justify-content: center;
+   flex-direction: row;
+ }
+
+ .sidebar_bal_spacer {
+   height: 3vh;
+ }
+
+ .sidebar_spacer {
+   height: 3vh;
+ }
+
+ .sidebar_lang {
+   display: flex;
+   justify-content: center;
+ }
