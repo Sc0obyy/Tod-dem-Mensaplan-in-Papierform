@@ -75,7 +75,7 @@ a {
 .dish-information{
   display: flex;
   justify-content: space-between;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
 }
 
 .dish-rating{
@@ -87,7 +87,6 @@ a {
 .dish-price{
   margin-right: 0.2vw;
 }
-
 
 .food-image {
   width: 100%;

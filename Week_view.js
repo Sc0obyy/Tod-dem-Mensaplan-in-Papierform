@@ -14,10 +14,10 @@ function addDish(dish) {
     `
 }
 
-function renderDishes() {
-    mondayDishes.forEach(e =>{
+function renderDishes(dayDishes) {
+    dayDishes.forEach(e =>{
         addDish(e);
     })
 }
 
-renderDishes()
+renderDishes(mondayDishes)
