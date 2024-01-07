@@ -10,77 +10,29 @@
     <body>
         <div class="sidebar"><p>Sidebar</p></div>
         <div class="day-column">
-            <div class="day">Montag</div>
+            <a href="Day_view.html">
+                <button class="button day_button">Montag</button>
+            </a>
             <div class="dishes">
-                <ul>
-                    <li class="dish-card">
-                        <div class = "dish-card-image">
-                            <img class="food-image" alt="curry" src="resources/curry.jpeg">
-                        </div>
-                        <div class="dish-name">Tofu Curry mit Reis</div>
-                    </li>
-                    <li class="dish-card">
-                        <div class = "dish-card-image">
-                            <img class="food-image" alt="pasta" src="resources/nudeln.jpeg">
-                        </div>
-                        <div class="dish-name">
-                            Nudeln mit Tomatensauce
-                        </div>
-                    </li>
-                    <li class="dish-card">
-                        <div class = "dish-card-image">
-                            <img class="food-image" alt="currywurst" src="resources/currywurst.jpeg">
-                        </div>
-                        <div class="dish-name">
-                            Currywurst mit Pommes
-                        </div>
-                    </li>
-                    <li class="dish-card">
-                        <div class = "dish-card-image">
-                            <img class="food-image" alt="schnitzel" src="resources/schnitzel.jpeg">
-                        </div>
-                        <div class="dish-name">
-                            Schnitzel
-                        </div>
-                    </li>
-                    <li class="dish-card">
-                        <div class = "dish-card-image">
-                            <img class="food-image" alt="pudding" src="resources/pudding.jpeg">
-                        </div>
-                        <div class="dish-name">
-                            Schokopudding
-                        </div>
-                    </li>
-                    <li class="dish-card">
-                        <div class = "dish-card-image">
-                            <img class="food-image" alt="salat" src="resources/salat.jpeg">
-                        </div>
-                        <div class="dish-name">
-                            Italienischer Salat
-                        </div>
-                    </li>
+                <ul id = "dishes-list">
                 </ul>
             </div>
         </div>
         <div class="day-column">
-            <div class="day">
-                Dienstag
-            </div>
+            <a href="Day_view.html">
+            <button class="button day_button">Dienstag</button>
+            </a>
         </div>
         <div class="day-column">
-            <div class="day">
-                Mittwoch
-            </div>
+            <button class="button day_button">Mittwoch</button>
         </div>
         <div class="day-column">
-            <div class="day">
-                Donnerstag                
-            </div>
+            <button class="button day_button">Donnerstag</button>
         </div>
         <div class="day-column">
-            <div class="day">
-                Freitag
-            </div>
+            <button class="button day_button">Freitag</button>
         </div>
+        <script src="monday_dishes.js"> </script>
+        <script src="Week_view.js"> </script>
     </body>
 </html>

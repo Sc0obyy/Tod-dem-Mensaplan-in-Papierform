@@ -7,19 +7,33 @@
 body {
     display: flex;
 }
+a {
+  text-decoration: none;
+}
 .day-column {
     width: 16vw;
     height: 100vh;
     border-right: 0.1vw solid black;
+    justify-content: center;
+    align-items: center;
 }
-.day {
-  font-size: 3vw;
-  width: 16vw;
+.day_button {
+  font-size: 2vw;
+  width: 12vw;
   height: 5%;
   justify-content: center;
   display: flex;
-  border-bottom: 0.1vw solid black;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  border: 0.1vw solid black;
+  border-radius: 0.5vw;
   padding-bottom: 10%;
+  cursor: pointer;
+}
+.day_button:hover {
+  transition-duration: 0.4s;
+  background-color: #004280;
+  color: white
 }
 .dishes::-webkit-scrollbar {
   display: none;
@@ -57,6 +71,23 @@ body {
   background-color: transparent;
   text-align: center;
 }
+
+.dish-information{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25vw;
+}
+
+.dish-rating{
+  margin-left: 0.2vw;
+  display: flex;
+  gap: 5px;
+}
+
+.dish-price{
+  margin-right: 0.2vw;
+}
+
 .food-image {
   width: 100%;
   height: 100%;
