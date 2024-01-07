@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fff;
+}
+
+#app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+#closeButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+#closeButton span {
+    font-size: 24px;
+}
+
+#imageContainer {
+    margin: 20px 0;
+}
+
+img {
+    width: 125px;
+    height: 125px;
+    border-radius: 4px;
+}
+
+#nutritionalInfo {
+    margin-top: 20px;
+}
+
+#notesAndAllergens {
+    margin-top: 20px;
+}
