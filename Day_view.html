@@ -5,17 +5,111 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Day_view.css">
- 
+
+  <!-- sidebar -->
+  <link rel="stylesheet" href="sidebar.css">
+  <script src="sidebar_popup.js"></script>
+
   <title>Day View</title>
 </head>
 
 <body>
   <div id="sidebar" class="sidebar">
-    <p>sidebar</p>
+    <!-- <div class="flex_main_rows"> -->
+    <div class="sidebar_flex_column">
+
+      <div class="sidebar_c_name">
+        <p1 class="sidebar_headings">Stefanie<br>Studentin</p1>
+      </div>
+
+      <div class="sidebar_pref">
+        <p1 class="sidebar_headings">Vorlieben</p1>
+        <div class="sidebar_pref_spacer"> </div>
+        <div class="sidebar_pref_preview" onclick="open_pref()">
+          <ul>
+            <li>Vegan</li>
+            <li>ohne Knoblauch</li>
+            <li>Glutenfrei</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar_bal">
+        <div class="sidebar_bal_head_button">
+          <p1 class="sidebar_headings">Saldo</p1>
+          <button onclick="open_bal()" class="sidebar_bal_head_button_plus">+</button>
+        </div>
+        <div class="sidebar_bal_spacer"> </div>
+        <div class="sidebar_bal_display">
+          <p1 class="sidebar_headings">05.62€</p1>
+        </div>
+      </div>
+
+      <div class="sidebar_spacer"> </div>
+
+      <div class="sidebar_lang">
+        <img src="resources/flag_de.png">
+      </div>
+      <a /div>
+        <!-- </div> -->
+    </div>
+
+    <div class="sidebar_overlay_bal" id="sidebar_overlay_bal">
+      <div class="sidebar_popup_bal">
+        <div>
+          <button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
+          <h1 class="sidebar_popup_bal_flex">Konto aufladen</h1>
+          <div class="sidebar_popup_bal_flex_choices">
+            <button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 5€</button>
+            <button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 10€</button>
+            <button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 20€</button>
+          </div>
+          <img src="resources/scan_pic.jpg" class="sidebar_popup_bal_flex">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sidebar_overlay_pref" id="sidebar_overlay_pref">
+      <div class="sidebar_popup_pref">
+        <div>
+          <button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
+          <h1 class="sidebar_popup_bal_flex">Vorlieben</h1>
+          <div class="sidebar_popup_pref_preview">
+            <table class="sidebar_popup_pref_preview_table">
+              <tr>
+                <td><input type="checkbox" checked>Glutenfrei</td>
+                <td><input type="checkbox">...</td>
+                <td><input type="checkbox">...</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked>Vegetarisch</td>
+                <td><input type="checkbox">...</td>
+                <td><input type="checkbox">...</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked>Vegan</td>
+                <td><input type="checkbox">...</td>
+                <td><input type="checkbox">...</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" checked>Ohne Knoblauch</td>
+                <td><input type="checkbox">...</td>
+                <td><input type="checkbox">...</td>
+              </tr>
+
+
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="main-body">
     <div class="day-selection">
-      <button onclick="displayDropdown('day-selection-dropdown')" id="day-selector-button" class="day-selector-button dropdown-button">Montag</button>
+      <button onclick="displayDropdown('day-selection-dropdown')" id="day-selector-button"
+        class="day-selector-button dropdown-button">Montag</button>
       <div id="day-selection-dropdown" class="day-selection-dropdown">
         <button onclick="displayDay('Montag')">Montag</button>
         <button onclick="displayDay('Dienstag')">Dienstag</button>
@@ -26,7 +120,8 @@
     </div>
     <div class="filter-bar">
       <div>
-        <button onclick="displayDropdown('filter-selection-dropdown')" class="filter-selector dropdown-button">Select Filter</button>
+        <button onclick="displayDropdown('filter-selection-dropdown')" class="filter-selector dropdown-button">Select
+          Filter</button>
         <button onclick="clearFilterArray()" class="clear-filter-button">Clear Filters</button>
       </div>
       <div id="filter-selection-dropdown" class="filter-selection-dropdown dropdown">
