@@ -1,4 +1,9 @@
 var filterArray = [];
+var currentDay = "Montag";
+
+window.onload = function() {
+  renderCards(currentDay);
+}
 
 function displayDropdown(id) {
   document.getElementById(id).classList.toggle("show");
@@ -19,8 +24,7 @@ window.onclick = function (event) {
 
 function clearFilterArray() {
   filterArray = [];
-  removeCards();
-  renderCards();
+  renderCards(currentDay);
   document.getElementById("filter-list").querySelectorAll('li').forEach(function (item) {
       item.remove();
   })
@@ -28,9 +32,9 @@ function clearFilterArray() {
 
 function displayDay(day) {
   document.getElementById("day-selector-button").innerHTML = day;
+  currentDay = day;
+  renderCards(currentDay);
 }
-
-renderCards();
 
 function addFilter(filter) {
   var myList = document.getElementById("filter-list");
@@ -53,8 +57,7 @@ function addFilter(filter) {
       }
     })
   }
-  removeCards();
-  renderCards();
+  renderCards(currentDay);
 }
 
 function removeCards() {
@@ -98,18 +101,30 @@ function createCard(dish) {
   `
 }
 
+function getDishedDay(day) {
+  switch(day) {
+    case "Montag":
+      return mondayDishes;
+    case "Dienstag":
+      return tuesdayDishes;
+    default:
+      return;
+  }
+}
 
-
-function renderCards() {
+function renderCards(day) {
+  removeCards();
   let sortedFilterArray = [];
   let indexCounter = 0;
 
-  for (let i = 0; i < mondayDishes.length; i++) {
-    if (filterArray.every(filter => mondayDishes[i].Filter.includes(filter))) {
-      sortedFilterArray.unshift(mondayDishes[i]);
+  let dishesDay = getDishedDay(day);
+
+  for (let i = 0; i < dishesDay.length; i++) {
+    if (filterArray.every(filter => dishesDay[i].Filter.includes(filter))) {
+      sortedFilterArray.unshift(dishesDay[i]);
       indexCounter += 1;
     } else {
-      sortedFilterArray.push(mondayDishes[i]);
+      sortedFilterArray.push(dishesDay[i]);
 
     }
   }

@@ -1,7 +1,9 @@
 
+
+
 const mondayDishes = [
   {
-    imageURL: "<img class=\"food-image\" alt=\"curry\" src=\"resources\\curry.jpeg\">",
+    imageURL: "<img class=\"food-image\" alt=\"curry\" src=\"resources\\monday_images\\curry.jpeg\">",
     name: "Tofu Curry mit Reis",
     Filter: ["Vegan", "Keine Nüsse", "High Protein", "Glutenfrei", "Laktosefrei"],
     FilterIcons: [
@@ -12,7 +14,7 @@ const mondayDishes = [
     price: "3,00€"
   },
   {
-    imageURL: "<img class=\"food-image\" alt=\"nudeln\" src=\"resources\\nudeln.jpeg\">",
+    imageURL: "<img class=\"food-image\" alt=\"nudeln\" src=\"resources\\monday_images\\nudeln.jpeg\">",
     name: "Nulden mit Tomatensauce",
     Filter: ["Vegan", "Keine Nüsse", "Laktosefrei"],
     FilterIcons: [
@@ -23,7 +25,7 @@ const mondayDishes = [
     price: "1,60€"
   },
   {
-    imageURL: "<img class=\"food-image\" alt=\"currywurst\" src=\"resources\\currywurst.jpeg\">",
+    imageURL: "<img class=\"food-image\" alt=\"currywurst\" src=\"resources\\monday_images\\currywurst.jpeg\">",
     name: "Currywurst Pommes",
     Filter: ["High Protein", "Keine Nüsse", "Mit Fleisch", "Glutenfrei", "Laktosefrei"],
     FilterIcons: [
@@ -34,7 +36,7 @@ const mondayDishes = [
     price: "3,00€"
   },
   {
-    imageURL: "<img class=\"food-image\" alt=\"pudding\" src=\"resources\\pudding.jpeg\">",
+    imageURL: "<img class=\"food-image\" alt=\"pudding\" src=\"resources\\monday_images\\pudding.jpeg\">",
     name: "Schokopudding",
     Filter: ["Vegetarisch", "Glutenfrei", "Keine Nüsse"],
     FilterIcons: [
@@ -45,7 +47,7 @@ const mondayDishes = [
     price: "0,80€"
   },
   {
-    imageURL: "<img class=\"food-image\" alt=\"schnitzel\" src=\"resources\\schnitzel.jpeg\">",
+    imageURL: "<img class=\"food-image\" alt=\"schnitzel\" src=\"resources\\monday_images\\schnitzel.jpeg\">",
     name: "Schnitzel",
     Filter: ["Glutenfrei", "High Protein", "Mit Fleisch", "Keine Nüsse", "Laktosefrei"],
     FilterIcons: [
@@ -56,7 +58,7 @@ const mondayDishes = [
     price: "4,00€"
   },
   {
-    imageURL: "<img class=\"food-image\" alt=\"salat\" src=\"resources\\salat.jpeg\">",
+    imageURL: "<img class=\"food-image\" alt=\"salat\" src=\"resources\\monday_images\\salat.jpeg\">",
     name:"Italienischer Salat",
     Filter: ["Vegetarisch", "Glutenfrei"],
     FilterIcons: [
