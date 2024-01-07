@@ -1,5 +1,5 @@
-function addDish(dish) {
-    const dishContainer = document.getElementById("dishes-list")
+function addDish(dish, id) {
+    const dishContainer = document.getElementById(id)
     dishContainer.innerHTML += `
     <li class="dish-card">
                         <div class = "dish-card-image">
@@ -14,10 +14,11 @@ function addDish(dish) {
     `
 }
 
-function renderDishes(dayDishes) {
+function renderDishes(dayDishes,id) {
     dayDishes.forEach(e =>{
-        addDish(e);
+        addDish(e, id);
     })
 }
 
-renderDishes(mondayDishes)
+renderDishes(mondayDishes, "monday-dishes")
+renderDishes(tuesdayDishes, "tuesday-dishes")

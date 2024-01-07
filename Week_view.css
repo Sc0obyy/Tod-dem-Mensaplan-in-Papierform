@@ -70,6 +70,7 @@ a {
   height: 100%;
   background-color: transparent;
   text-align: center;
+  display: inline-block;
 }
 
 .dish-information{
