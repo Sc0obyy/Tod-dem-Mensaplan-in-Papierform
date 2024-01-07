@@ -1,74 +1,109 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="sidebar.css">
-  <script src="popup_balance.js"></script>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="sidebar.css">
+	<script src="sidebar_popup.js"></script>
 </head>
 
 <body>
-  <div class="flex_main_rows">
-    <div class="sidebar_flex_column">
-
-      <div class="sidebar_c_name">
-        <p1 style="font-size: 50px; font-family: Arial, Helvetica, sans-serif;">Stefanie<br>Studentin</p1>
-      </div>
-
-      <div class="sidebar_pref">
-        <p1 style="font-size: 50px; font-family: Arial, Helvetica, sans-serif;">Vorlieben</p1>
-        <div class="sidebar_pref_spacer"> </div>
-        <div class="sidebar_pref_preview">
-          <ul>
-            <li>Vegan</li>
-            <li>ohne Knoblauch</li>
-            <li>Glutenfrei</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="sidebar_bal">
-        <div class="sidebar_bal_head_button">
-          <p1 style="font-size: 50px; font-family: Arial, Helvetica, sans-serif;">Saldo</p1>
-          <button onclick="openPopup()"
-            style="font-size: 50px; margin-left: 20px; font-family: Arial, Helvetica, sans-serif; border: solid; border-color: rgb(0,84,156); border-width: thick;">+</button>
-        </div>
-        <div class="sidebar_bal_spacer"> </div>
-        <div class="sidebar_bal_display">
-          <p1 style="font-size: 45px; font-family: Arial, Helvetica, sans-serif;">05.62€</p1>
-        </div>
-      </div>
-
-      <div class="sidebar_spacer"> </div>
-
-      <div class="sidebar_lang">
-        <img src="resources/flag_de.png">
-      </div>
-
-    </div>
-
-    <div class="main_content">
-      <p1>Content</p1>
-    </div>
-
-  </div>
-
-  <div class="sidebar_overlay_bal" id="sidebar_overlay_bal">
-    <div class="sidebar_popup_bal">
-      <div>
-        <button onclick="closePopup()">X</button>
-        <h1 class="sidebar_popup_bal_flex">Konto aufladen</h1>
-        <div class="sidebar_popup_bal_flex_choices">
-          <button onclick="closePopup()" style="height:10vh;width:15vh;font-size: 35px;"> 5€</button>
-          <button onclick="closePopup()" style="height:10vh;width:15vh;font-size: 35px;"> 10€</button>
-          <button onclick="closePopup()" style="height:10vh;width:15vh;font-size: 35px;"> 20€</button>
-        </div>
-        <img src="resources/scan_pic.jpg" class="sidebar_popup_bal_flex">
-      </div>
-    </div>
-  </div>
-
-
+	<div class="flex_main_rows">
+			<div class="sidebar_flex_column">
+			
+				<div class="sidebar_c_name">
+					<p1 class="sidebar_headings">Stefanie<br>Studentin</p1>
+				</div>
+				
+				<div class="sidebar_pref">
+						<p1 class="sidebar_headings">Vorlieben</p1>
+					<div class="sidebar_pref_spacer">	</div>
+					<div class="sidebar_pref_preview"  onclick="open_pref()">
+						<ul>
+      						<li>Vegan</li>
+      						<li>ohne Knoblauch</li>
+      						<li>Glutenfrei</li>
+   						 </ul>
+					</div>
+				</div>
+				
+				<div class="sidebar_bal">
+					<div class="sidebar_bal_head_button">
+						<p1 class="sidebar_headings">Saldo</p1>
+						<button onclick="open_bal()" class="sidebar_bal_head_button_plus">+</button>
+					</div>
+					<div class="sidebar_bal_spacer">	</div>
+					<div class="sidebar_bal_display">
+						<p1 class="sidebar_headings">05.62€</p1>
+					</div>
+				</div>
+				
+				<div class="sidebar_spacer">	</div>
+				
+				<div class="sidebar_lang">
+					<img src="resources/flag_de.png">
+				</div>
+				
+			</div>
+		
+			<div class="main_content">
+				<p1>Content</p1>
+			</div>
+		
+	</div>
+	
+	<div class="sidebar_overlay_bal" id="sidebar_overlay_bal">
+    	<div class="sidebar_popup_bal">
+    		<div>
+    			<button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
+    			<h1 class="sidebar_popup_bal_flex">Konto aufladen</h1>
+    				<div class="sidebar_popup_bal_flex_choices">
+    					<button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 5€</button>
+    					<button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 10€</button>
+    					<button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 20€</button>
+    				</div>
+    			<img src="resources/scan_pic.jpg" class="sidebar_popup_bal_flex">
+    		</div>
+    	</div>
+  	</div>
+  	
+  	
+  	<div class="sidebar_overlay_pref" id="sidebar_overlay_pref">
+    	<div class="sidebar_popup_pref">
+    		<div>
+    			<button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
+    			<h1 class="sidebar_popup_bal_flex">Vorlieben</h1>
+    				<div class="sidebar_popup_pref_preview">
+    					<table class="sidebar_popup_pref_preview_table">
+    						<tr>
+    							<td><input type="checkbox" checked>Glutenfrei</td>
+    							<td><input type="checkbox">...</td>
+    							<td><input type="checkbox">...</td>
+    						</tr>
+    						<tr>
+    							<td><input type="checkbox" checked>Vegetarisch</td>
+    							<td><input type="checkbox">...</td>
+    							<td><input type="checkbox">...</td>
+    						</tr>
+    						<tr>
+    							<td><input type="checkbox" checked>Vegan</td>
+    							<td><input type="checkbox">...</td>
+    							<td><input type="checkbox">...</td>
+    						</tr>
+    						<tr>
+    							<td><input type="checkbox" checked>Ohne Knoblauch</td>
+    							<td><input type="checkbox">...</td>
+    							<td><input type="checkbox">...</td>
+    						</tr>
+    						
+    						
+    					</table>
+    					
+    				</div>
+    		</div>
+    	</div>
+  	</div>
+	
+	
 </body>
 
 </html>
