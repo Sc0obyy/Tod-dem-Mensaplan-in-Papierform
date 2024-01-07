@@ -1,71 +1,149 @@
- html,
- body {
-   height: 100%;
- }
+ html, body {
+  	height: 100%;
+	}
+  .flex_main_rows{
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: space-between;
+  	height: 100vh;
+  }
+  .sidebar_flex_column{
+  	display:flex;
+  	flex-direction: column;
+  	max-width: 40vh;
+  	justify-content: space-between;
+  	flex:1;
+  	padding: 10px;
+  	border-right: 3px solid gray;
+  }
+  .sidebar_c_name{
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  }
+  .sidebar_headings{
+  	font-size: 50px; 
+  	font-family: Arial, Helvetica, sans-serif;
+  }
+  .sidebar_pref{
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  }
+  .sidebar_pref_spacer{
+  	height: 1vh;
+  }
+  .sidebar_pref_preview{
+  	font-size: 30px;
+  	font-family: Arial, Helvetica, sans-serif;
+  	border: solid;
+  	border-color: rgb(0,84,156);
+  	border-width: thick;
+  	width: 40vh;
+  }
+  .sidebar_bal{
+  	display: flex;
+  	justify-content: center;
+  	flex-direction: column;
+  	align-items: center;
+  }
+  .sidebar_bal_head_button{
+  	display: flex;
+  	justify-content: center;
+  	flex-direction: row;
+  }
+  .sidebar_bal_head_button_plus{
+  	font-size: 50px; 
+  	margin-left: 20px; 
+  	font-family: Arial, Helvetica, sans-serif; 
+  	border: solid; 
+  	border-color: rgb(0,84,156); 
+  	border-width: thick;
+  }
+  .sidebar_bal_spacer{
+  	height: 3vh;
+  }
+  .sidebar_spacer{
+ 	 height: 3vh;
+  }
+  .sidebar_lang{
+  	display: flex;
+  	justify-content: center;
+  }
+  
+  
+	.sidebar_overlay_bal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+      justify-content: center;
+      align-items: center;
+    }
+    
+     .sidebar_popup_bal {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .sidebar_popup_bal_flex{
+    	display:flex;
+    	flex-direction: column;
+    	align-items: center;
+    	font-family: Arial, Helvetica, sans-serif;
+    }
+    .sidebar_popup_bal_flex_choices{
+    	display:flex;
+    	flex-direction: row;
+    	justify-content: space-around;
+    	font-family: Arial, Helvetica, sans-serif;
+    	font-size: 35px;
+    }
+    
+    .sidebar_overlay_pref {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+      justify-content: center;
+      align-items: center;
+    }
+     .sidebar_popup_pref {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    .
+    
+    .sidebar_popup_pref_preview{
+    
+    }
+    .sidebar_popup_bal_flex_button{
+   		height:15vh;
+   		width:20vh;
+   		font-size: 35px;
+    }
+    .sidebar_popup_bal_flex_button_x{
+   		height:7vh;
+   		width:7vh;
+   		font-size: 35px;
+   		align-items: right;
+    }
+    .sidebar_popup_pref_preview_table{
+    	font-size: 30px;
+    	padding: 20px;
+    	border-spacing: 50px;
+    }
 
- .flex_main_rows {
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between;
-   height: 100vh;
- }
 
- .sidebar_flex_column {
-   display: flex;
-   flex-direction: column;
-   max-width: 40vh;
-   justify-content: space-between;
-   flex: 1;
-   padding: 10px;
-   border-right: 3px solid gray;
- }
-
- .sidebar_c_name {
-   display: flex;
-   justify-content: center;
-   align-items: center;
- }
-
- .sidebar_pref {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- }
-
- .sidebar_pref_spacer {
-   height: 1vh;
- }
-
- .sidebar_pref_preview {
-   font-size: 30px;
-   font-family: Arial, Helvetica, sans-serif;
-   border: solid;
-   border-color: rgb(0, 84, 156);
-   border-width: thick;
- }
-
- .sidebar_bal {
-   display: flex;
-   justify-content: center;
-   flex-direction: column;
-   align-items: center;
- }
-
- .sidebar_bal_head_button {
-   display: flex;
-   justify-content: center;
-   flex-direction: row;
- }
-
- .sidebar_bal_spacer {
-   height: 3vh;
- }
-
- .sidebar_spacer {
-   height: 3vh;
- }
-
- .sidebar_lang {
-   display: flex;
-   justify-content: center;
- }
+  
+  
+  
