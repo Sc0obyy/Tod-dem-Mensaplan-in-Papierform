@@ -22,3 +22,6 @@ function renderDishes(dayDishes,id) {
 
 renderDishes(mondayDishes, "monday-dishes")
 renderDishes(tuesdayDishes, "tuesday-dishes")
+renderDishes(mondayDishes, "wednesday-dishes")
+renderDishes(tuesdayDishes, "thursday-dishes")
+renderDishes(mondayDishes, "friday-dishes")
