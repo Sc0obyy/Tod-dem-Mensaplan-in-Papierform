@@ -219,4 +219,5 @@ body {
 
 .appliedFilter {
   filter: grayscale(0.8);
+  z-index: -1;
 }

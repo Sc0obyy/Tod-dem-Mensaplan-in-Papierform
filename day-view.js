@@ -1,7 +1,9 @@
 var filterArray = [];
 var currentDay = "Montag";
+var globalCustomFilterSelected = false;
 
-window.onload = function() {
+
+window.onload = function () {
   renderCards(currentDay);
 }
 
@@ -26,7 +28,7 @@ function clearFilterArray() {
   filterArray = [];
   renderCards(currentDay);
   document.getElementById("filter-list").querySelectorAll('li').forEach(function (item) {
-      item.remove();
+    item.remove();
   })
 }
 
@@ -38,26 +40,48 @@ function displayDay(day) {
 
 function addFilter(filter) {
   var myList = document.getElementById("filter-list");
+
   if (!filterArray.includes(filter)) {
-    filterArray.push(filter);
-    const node = document.createElement("li");
-    const textNode = document.createTextNode(filter);
-    node.classList.add("selected-filter");
-    node.appendChild(textNode);
-    myList.appendChild(node);
-    
-  } else {
-    const itemIndex = filterArray.indexOf(filter);
-    if (itemIndex > -1) {
-      filterArray.splice(itemIndex, 1);
+    if (filter === "Meine Vorlieben") {
+      globalFilterArray.forEach(f => {
+        if (!filterArray.includes(f)) {
+          addFilterToArray(f, myList);
+        }
+      })
     }
-    myList.querySelectorAll('li').forEach(function (item) {
-      if (item.innerHTML === filter) {
-        item.remove();
-      }
-    })
+    addFilterToArray(filter, myList)
+  } else {
+    if (filter === "Meine Vorlieben") {
+      globalFilterArray.forEach(f => {
+        if (filterArray.includes(f)) {
+          removeFilterFromArray(f, myList);
+        }
+      })
+    }
+    removeFilterFromArray(filter, myList)
   }
   renderCards(currentDay);
+}
+
+function addFilterToArray(filter, myList) {
+  filterArray.push(filter);
+  const node = document.createElement("li");
+  const textNode = document.createTextNode(filter);
+  node.classList.add("selected-filter");
+  node.appendChild(textNode);
+  myList.appendChild(node);
+}
+
+function removeFilterFromArray(filter, myList) {
+  const itemIndex = filterArray.indexOf(filter);
+  if (itemIndex > -1) {
+    filterArray.splice(itemIndex, 1);
+  }
+  myList.querySelectorAll('li').forEach(function (item) {
+    if (item.innerHTML === filter) {
+      item.remove();
+    }
+  })
 }
 
 function removeCards() {
@@ -102,7 +126,7 @@ function createCard(dish) {
 }
 
 function getDishedDay(day) {
-  switch(day) {
+  switch (day) {
     case "Montag":
       return mondayDishes;
     case "Dienstag":

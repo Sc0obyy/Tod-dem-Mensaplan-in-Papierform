@@ -8,7 +8,7 @@
 
   <!-- sidebar -->
   <link rel="stylesheet" href="sidebar.css">
-  <script src="sidebar_popup.js"></script>
+  
 
   <title>Day View</title>
 </head>
@@ -19,39 +19,33 @@
     <div class="sidebar_flex_column">
 
       <div class="sidebar_c_name">
-        <p1 class="sidebar_headings">Stefanie<br>Studentin</p1>
+        <p class="sidebar-name">Stefanie</p>
+        <p class="sidebar-role">Studentin</p>
       </div>
 
-      <div class="sidebar_pref">
-        <p1 class="sidebar_headings">Vorlieben</p1>
-        <div class="sidebar_pref_spacer"> </div>
-        <div class="sidebar_pref_preview" onclick="open_pref()">
-          <ul>
-            <li>Vegan</li>
-            <li>ohne Knoblauch</li>
-            <li>Glutenfrei</li>
+      <div class="sidebar_pref" onclick="open_pref()">
+        <p class="sidebar-headings">Vorlieben</p>
+        <div class="sidebar-pref-preview">
+          <ul id="sidebar-preferences-list" class="sidebar-preferences-list">
           </ul>
         </div>
       </div>
 
       <div class="sidebar_bal">
         <div class="sidebar_bal_head_button">
-          <p1 class="sidebar_headings">Saldo</p1>
+          <p class="sidebar-saldo-text">Saldo</p>
           <button onclick="open_bal()" class="sidebar_bal_head_button_plus">+</button>
         </div>
-        <div class="sidebar_bal_spacer"> </div>
         <div class="sidebar_bal_display">
-          <p1 class="sidebar_headings">05.62€</p1>
+          <p id="saldo" class="sidebar_headings">05.62€</p>
         </div>
       </div>
 
-      <div class="sidebar_spacer"> </div>
 
       <div class="sidebar_lang">
-        <img src="resources/flag_de.png">
+        <input type="image" src="resources/flag_de.png">
       </div>
-      <a /div>
-        <!-- </div> -->
+      
     </div>
 
     <div class="sidebar_overlay_bal" id="sidebar_overlay_bal">
@@ -76,31 +70,15 @@
           <button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
           <h1 class="sidebar_popup_bal_flex">Vorlieben</h1>
           <div class="sidebar_popup_pref_preview">
-            <table class="sidebar_popup_pref_preview_table">
-              <tr>
-                <td><input type="checkbox" checked>Glutenfrei</td>
-                <td><input type="checkbox">...</td>
-                <td><input type="checkbox">...</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked>Vegetarisch</td>
-                <td><input type="checkbox">...</td>
-                <td><input type="checkbox">...</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked>Vegan</td>
-                <td><input type="checkbox">...</td>
-                <td><input type="checkbox">...</td>
-              </tr>
-              <tr>
-                <td><input type="checkbox" checked>Ohne Knoblauch</td>
-                <td><input type="checkbox">...</td>
-                <td><input type="checkbox">...</td>
-              </tr>
-
-
-            </table>
-
+            <ul class="sidebar-popup-pref-list">
+              <li><input onclick="addToArray('Keine Nüsse', this)" type="checkbox">Keine Nüsse</li>
+              <li><input onclick="addToArray('Vegan', this)" type="checkbox">Vegan</li>
+              <li><input onclick="addToArray('Vegetarisch', this)" type="checkbox">Vegetarisch</li>
+              <li><input onclick="addToArray('Glutenfrei', this)" type="checkbox">Glutenfrei</li>
+              <li><input onclick="addToArray('Laktosefrei', this)" type="checkbox">Laktosefrei</li>
+              <li><input onclick="addToArray('High Protein', this)" type="checkbox">High Protein</li>
+              <li><input onclick="addToArray('Mit Fleisch', this)" type="checkbox">Mit Fleisch</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -125,7 +103,7 @@
         <button onclick="clearFilterArray()" class="clear-filter-button">Clear Filters</button>
       </div>
       <div id="filter-selection-dropdown" class="filter-selection-dropdown dropdown">
-        <button onclick="addFilter('Meine Vorlieben')">Mein Vorlieben</button>
+        <button onclick="addFilter('Meine Vorlieben')">Meine Vorlieben</button>
         <button onclick="addFilter('Keine Nüsse')">Keine Nüsse</button>
         <button onclick="addFilter('Vegan')">Vegan</button>
         <button onclick="addFilter('Vegetarisch')">Vegetarisch</button>
@@ -145,7 +123,9 @@
   <!-- Scripts -->
   <script src="monday_dishes.js"></script>
   <script src="tuesday_dishes.js"></script>
+  <script src="filterArray.js"></script>
   <script src="day-view.js"></script>
+  <script src="sidebar_popup.js"></script>
 </body>
 
 </html>

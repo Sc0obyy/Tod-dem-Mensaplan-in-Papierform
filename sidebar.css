@@ -3,6 +3,7 @@
    height: 100%;
  }
 
+
  .sidebar_flex_column {
    display: flex;
    flex-direction: column;
@@ -16,31 +17,45 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
  }
 
- .sidebar_headings {
-   font-size: 50px;
-   font-family: Arial, Helvetica, sans-serif;
+ .sidebar-name {
+   font-size: 3vw;
+ }
+
+ .sidebar-role {
+   font-size: 1.5vw;
+ }
+
+ .sidebar-headings {
+   font-size: 2vw;
+   padding-bottom: 5px;
  }
 
  .sidebar_pref {
    display: flex;
    flex-direction: column;
    align-items: center;
+   list-style-type: none;
+   border: 3px solid #008cba;
+   margin-left: 2vw;
+   margin-right: 2vw;
  }
 
- .sidebar_pref_spacer {
-   height: 1vh;
+ .sidebar_pref:hover {
+  cursor: pointer;
+  background-color: #008cba;
+  color: white;
  }
 
- .sidebar_pref_preview {
-   box-sizing: border-box;
-   font-size: 30px;
-   font-family: Arial, Helvetica, sans-serif;
-   border: solid;
-   border-color: rgb(0, 84, 156);
-   border-width: thick;
-   width: 100%;
+ .sidebar-saldo-text {
+  font-size: 4vh;
+ }
+
+ .sidebar-preferences-list > li {
+   font-size: 1.5vw;
+   text-align: center;
  }
 
  .sidebar_bal {
@@ -57,20 +72,20 @@
  }
 
  .sidebar_bal_head_button_plus {
-   font-size: 50px;
+   font-size: 4vh;
    margin-left: 20px;
-   font-family: Arial, Helvetica, sans-serif;
    border: solid;
-   border-color: rgb(0, 84, 156);
+   border-color: #008cba;
    border-width: thick;
+   height: 4vh;
+   width: 4vh;
+   line-height: 2vh;
  }
 
- .sidebar_bal_spacer {
-   height: 3vh;
- }
-
- .sidebar_spacer {
-   height: 3vh;
+ .sidebar_bal_head_button_plus:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #008cba;
  }
 
  .sidebar_lang {
@@ -78,6 +93,9 @@
    justify-content: center;
  }
 
+.language-setting {
+  background-color: transparent;
+}
 
  .sidebar_overlay_bal {
    display: none;
@@ -136,6 +154,13 @@
    height: 15vh;
    width: 20vh;
    font-size: 35px;
+   border: 2px solid black;
+   background-color: transparent;
+ }
+
+ .sidebar_popup_bal_flex_button:hover, .sidebar_popup_bal_flex_button_x:hover {
+  background-color: lightgray;
+  cursor: pointer;
  }
 
  .sidebar_popup_bal_flex_button_x {
@@ -143,10 +168,33 @@
    width: 7vh;
    font-size: 35px;
    align-items: right;
+   background-color: transparent;
  }
 
- .sidebar_popup_pref_preview_table {
+ .sidebar_popup_pref_preview {
    font-size: 30px;
    padding: 20px;
    border-spacing: 50px;
+   width: 50vw;
+   height: 50vh;
+   display: flex;
+   align-items: center;
+ }
+
+ .sidebar-popup-pref-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+
+ .sidebar-popup-pref-list > li {
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  padding: 1vh;
+ }
+
+ .sidebar-popup-pref-list > li input[type="checkbox"] {
+  margin-right: 10px;
+  font-size: 300%;
  }

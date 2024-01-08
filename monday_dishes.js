@@ -5,7 +5,7 @@ const mondayDishes = [
   {
     imageURL: "<img class=\"food-image\" alt=\"curry\" src=\"resources\\monday_images\\curry.jpeg\">",
     name: "Tofu Curry mit Reis",
-    Filter: ["Vegan", "Keine Nüsse", "High Protein", "Glutenfrei", "Laktosefrei"],
+    Filter: ["Meine Vorlieben", "Vegan", "Keine Nüsse", "High Protein", "Glutenfrei", "Laktosefrei"],
     FilterIcons: [
       "<img class=\"icon\" alt=\"vegan icon\" src=\"resources\\icons\\vegan.png\">",
       "<img class=\"icon\" alt=\"protein icon\" src=\"resources\\icons\\muscles.png\">"
@@ -16,7 +16,7 @@ const mondayDishes = [
   {
     imageURL: "<img class=\"food-image\" alt=\"nudeln\" src=\"resources\\monday_images\\nudeln.jpeg\">",
     name: "Nulden mit Tomatensauce",
-    Filter: ["Vegan", "Keine Nüsse", "Laktosefrei"],
+    Filter: ["Meine Vorlieben", "Vegan", "Keine Nüsse", "Laktosefrei"],
     FilterIcons: [
       "<img class=\"icon\" alt=\"vegan icon\" src=\"resources\\icons\\vegan.png\">",
       "<img class=\"icon\" alt=\"gluten icon\" src=\"resources\\icons\\gluten.png\">"
@@ -27,7 +27,7 @@ const mondayDishes = [
   {
     imageURL: "<img class=\"food-image\" alt=\"currywurst\" src=\"resources\\monday_images\\currywurst.jpeg\">",
     name: "Currywurst Pommes",
-    Filter: ["High Protein", "Keine Nüsse", "Mit Fleisch", "Glutenfrei", "Laktosefrei"],
+    Filter: ["Meine Vorlieben", "High Protein", "Keine Nüsse", "Mit Fleisch", "Glutenfrei", "Laktosefrei"],
     FilterIcons: [
       "<img class=\"icon\" alt=\"protein icon\" src=\"resources\\icons\\muscles.png\">",
       "<img class=\"icon\" alt=\"pork icon\" src=\"resources\\icons\\pig.png\">"
@@ -38,7 +38,7 @@ const mondayDishes = [
   {
     imageURL: "<img class=\"food-image\" alt=\"pudding\" src=\"resources\\monday_images\\pudding.jpeg\">",
     name: "Schokopudding",
-    Filter: ["Vegetarisch", "Glutenfrei", "Keine Nüsse"],
+    Filter: ["Meine Vorlieben", "Vegetarisch", "Glutenfrei", "Keine Nüsse"],
     FilterIcons: [
       "<img class=\"icon\" alt=\"vegetarian icon\" src=\"resources\\icons\\vegetarian.png\">",
       "<img class=\"icon\" alt=\"dairy icon\" src=\"resources\\icons\\dairy-products.png\">"
@@ -49,7 +49,7 @@ const mondayDishes = [
   {
     imageURL: "<img class=\"food-image\" alt=\"schnitzel\" src=\"resources\\monday_images\\schnitzel.jpeg\">",
     name: "Schnitzel",
-    Filter: ["Glutenfrei", "High Protein", "Mit Fleisch", "Keine Nüsse", "Laktosefrei"],
+    Filter: ["Meine Vorlieben", "Glutenfrei", "High Protein", "Mit Fleisch", "Keine Nüsse", "Laktosefrei"],
     FilterIcons: [
       "<img class=\"icon\" alt=\"protein icon\" src=\"resources\\icons\\muscles.png\">",
       "<img class=\"icon\" alt=\"pork icon\" src=\"resources\\icons\\pig.png\">"
@@ -60,7 +60,7 @@ const mondayDishes = [
   {
     imageURL: "<img class=\"food-image\" alt=\"salat\" src=\"resources\\monday_images\\salat.jpeg\">",
     name:"Italienischer Salat",
-    Filter: ["Vegetarisch", "Glutenfrei"],
+    Filter: ["Meine Vorlieben", "Vegetarisch", "Glutenfrei"],
     FilterIcons: [
       "<img class=\"icon\" alt=\"vegetarian icon\" src=\"resources\\icons\\vegetarian.png\">",
       "<img class=\"icon\" alt=\"dairy icon\" src=\"resources\\icons\\dairy-products.png\">",
