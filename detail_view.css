@@ -86,3 +86,7 @@ h3  {
 p {
     font-size: 1vw;
 }
+
+#food-info {
+  z-index: -1;
+}
