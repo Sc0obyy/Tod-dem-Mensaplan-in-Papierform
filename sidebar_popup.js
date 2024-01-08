@@ -35,3 +35,12 @@ function addToArray(filter, element) {
   addFilter("Meine Vorlieben")
 }
 
+var saldo = 5.26;
+document.getElementById("saldo").innerHTML = saldo;
+
+function addFunds(amount) {
+  saldo += amount;
+  saldo.toFixed(2);
+  document.getElementById("saldo").innerHTML = saldo;
+  closePopup();
+}

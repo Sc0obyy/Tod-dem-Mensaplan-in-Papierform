@@ -37,7 +37,7 @@
           <button onclick="open_bal()" class="sidebar_bal_head_button_plus">+</button>
         </div>
         <div class="sidebar_bal_display">
-          <p id="saldo" class="sidebar_headings">05.62€</p>
+          <p id="saldo" class="saldo"></p>
         </div>
       </div>
 
@@ -54,9 +54,9 @@
           <button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
           <h1 class="sidebar_popup_bal_flex">Konto aufladen</h1>
           <div class="sidebar_popup_bal_flex_choices">
-            <button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 5€</button>
-            <button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 10€</button>
-            <button onclick="closePopup()" class="sidebar_popup_bal_flex_button"> 20€</button>
+            <button onclick="addFunds(5)" class="sidebar_popup_bal_flex_button"> 5€</button>
+            <button onclick="addFunds(10)" class="sidebar_popup_bal_flex_button"> 10€</button>
+            <button onclick="addFunds(20)" class="sidebar_popup_bal_flex_button"> 20€</button>
           </div>
           <img src="resources/scan_pic.jpg" class="sidebar_popup_bal_flex">
         </div>
