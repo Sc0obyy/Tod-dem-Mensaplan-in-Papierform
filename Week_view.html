@@ -5,10 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Week_view.css">
         <script src="Week_view.css"></script>
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+        <script> 
+            $(function(){
+            $("#sidebar").load("sidebar.html"); 
+            });
+        </script> 
         <title>Week View</title>
     </head>
     <body>
-        <div class="sidebar"><p>Sidebar</p></div>
+        <div id ="sidebar"></div>
         <div class="day-column">
             <a href="Day_view.html">
                 <button class="button day_button">Montag</button>

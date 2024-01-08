@@ -1,44 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
     background-color: #fff;
 }
 
 #app {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 60vw;
+    height: 70vh;
+    padding: 5vw;
+    border-radius: 2vw;
+    box-shadow: 0 0 10vw rgba(0, 0, 0, 0.1);
     text-align: center;
     position: relative;
 }
 
 #closeButton {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 1vw;
+    left: 1vw;
+    width: 5vw;
     cursor: pointer;
+    color: black;
+    border-radius: 1vw;
+    border: 0.1vw solid black;
+}
+
+#closeButton:hover {
+    transition-duration: 0.4s;
 }
 
 #closeButton span {
-    font-size: 24px;
+    font-size: 4vw;
 }
 
 #imageContainer {
-    margin: 20px 0;
+    margin: 0;
 }
 
 img {
-    width: 125px;
-    height: 125px;
-    border-radius: 4px;
+    width: 20vw;
+    height: 15vw;
+    border-radius: 4vw;
 }
 
 #nutritionalInfo {
-    margin-top: 20px;
+    margin-top: 1vh;
+    justify-content: center;
 }
 
 #notesAndAllergens {
-    margin-top: 20px;
+    margin-top: 1vh;
+}
+
+.sidebar {
+    width: 20vw;
+    height: 100vh;
+    border-right: 0.1vw solid black;
+}
+
+.nutrition{
+    text-align: center
+}
+
+h1 {
+    font-size: 1.5vw;
+}
+
+h2 {
+    font-size: 1.2vw;
+}
+
+h3  {
+    font-size: 1.1vw;
+}
+
+p {
+    font-size: 1vw;
 }
