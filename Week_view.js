@@ -1,4 +1,4 @@
-
+// adds dish card with given dish, id, index and current day
 function addDish(dish, id, index, currentDay) {
     const dishContainer = document.getElementById(id)
     dishContainer.innerHTML += `
@@ -17,12 +17,14 @@ function addDish(dish, id, index, currentDay) {
 
 var currentDay = 0
 
+// got to detail view
 function seeInfo(day, index) {
     localStorage.setItem("day", day)
     localStorage.setItem("index", index)
     window.location.href = "detail_view.html"
 }
 
+// renders all dishes
 function renderDishes(dayDishes,id) {
     index = 0
     dayDishes.forEach(e =>{
@@ -32,6 +34,7 @@ function renderDishes(dayDishes,id) {
     currentDay += 1
 }
 
+// set dishes for the week
 renderDishes(mondayDishes, "monday-dishes")
 renderDishes(tuesdayDishes, "tuesday-dishes")
 renderDishes(mondayDishes, "wednesday-dishes")
