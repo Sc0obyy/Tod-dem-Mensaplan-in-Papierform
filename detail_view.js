@@ -1,13 +1,17 @@
-
+// go back to last view
 function goBack() {
     window.history.back();
 }
+
+// set day depending on given int
 function convertIntToDay(day){
     if (day == 0 || day == 2 || day == 4 ){
         return mondayDishes
     } else
     return tuesdayDishes
 }
+
+// create card with info on a dish
 function addFoodInfo(day, index) {
     dish = day[index]
     const foodContainer = document.getElementById("food-info")
@@ -36,6 +40,8 @@ function addFoodInfo(day, index) {
         </div>
     </div>`
 }
+
+// create allergy information on a dish
 function addAllergies(day, index){
     const allergyContainer = document.getElementById("Hinweise")
     day[index].Filter.forEach(element => {
@@ -46,6 +52,8 @@ function addAllergies(day, index){
         }
     });
 }
+
+// call functions to create allergy information and food info
 addFoodInfo(convertIntToDay(localStorage.getItem("day")), localStorage.getItem("index"))
 addAllergies(convertIntToDay(localStorage.getItem("day")), localStorage.getItem("index"))
 
