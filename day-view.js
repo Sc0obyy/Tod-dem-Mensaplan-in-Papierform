@@ -2,15 +2,17 @@ var filterArray = [];
 var currentDay = "Montag";
 var globalCustomFilterSelected = false;
 
-
+// renders all cards when page is loaded
 window.onload = function () {
   renderCards(currentDay);
 }
 
+// display a dropdown, select with id
 function displayDropdown(id) {
   document.getElementById(id).classList.toggle("show");
 }
 
+// unshow dropdown
 window.onclick = function (event) {
   if (!event.target.matches('.dropdown-button')) {
     var dropdownArray = []
@@ -24,6 +26,7 @@ window.onclick = function (event) {
   }
 }
 
+// clears filter array
 function clearFilterArray() {
   filterArray = [];
   renderCards(currentDay);
@@ -32,12 +35,15 @@ function clearFilterArray() {
   })
 }
 
+// displayed day according to dropdown choice
 function displayDay(day) {
   document.getElementById("day-selector-button").innerHTML = day;
   currentDay = day;
   renderCards(currentDay);
 }
 
+// add or remove a filter to/from filter array, check if filter is "meine Vorlieben"
+// if filter is "meine Vorlieben" then add/remove all vorlieben to filter array
 function addFilter(filter) {
   var myList = document.getElementById("filter-list");
 
@@ -63,6 +69,7 @@ function addFilter(filter) {
   renderCards(currentDay);
 }
 
+// adds a filter to filterarray
 function addFilterToArray(filter, myList) {
   filterArray.push(filter);
   const node = document.createElement("li");
@@ -72,6 +79,7 @@ function addFilterToArray(filter, myList) {
   myList.appendChild(node);
 }
 
+// remove a filter from filterarray
 function removeFilterFromArray(filter, myList) {
   const itemIndex = filterArray.indexOf(filter);
   if (itemIndex > -1) {
@@ -84,6 +92,7 @@ function removeFilterFromArray(filter, myList) {
   })
 }
 
+// removes all cards from screen
 function removeCards() {
   const myNode = document.getElementById("dishes-list");
   while (myNode.firstChild) {
@@ -91,6 +100,7 @@ function removeCards() {
   }
 }
 
+// put filter icons elements in a string
 function addIconList(arr) {
   let string = ""
   for (let i = 0; i < arr.length; i++) {
@@ -99,7 +109,7 @@ function addIconList(arr) {
   return string
 }
 
-
+// create card with dish properties
 function createCard(dish) {
   const cardContainer = document.getElementById("dishes-list");
 
@@ -124,7 +134,7 @@ function createCard(dish) {
   </li>
   `
 }
-
+ // gets all dishes for specific day
 function getDishedDay(day) {
   switch (day) {
     case "Montag":
@@ -136,6 +146,7 @@ function getDishedDay(day) {
   }
 }
 
+// function that rendes all cards for a specific day
 function renderCards(day) {
   removeCards();
   let sortedFilterArray = [];
