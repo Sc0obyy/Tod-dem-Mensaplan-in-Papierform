@@ -203,3 +203,21 @@
  .saldo {
   font-size: 2vw;
  }
+
+ .sidebar-heading {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.log-out-icon {
+  margin-top: 3vh;
+  width: 2vw;
+  height: 2vw;
+  background-color: #ed2939cc;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.log-out-icon:hover {
+  background-color: #ed2939ff;
+}

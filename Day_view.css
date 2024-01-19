@@ -221,3 +221,55 @@ body {
   filter: grayscale(0.8);
   z-index: -1;
 }
+
+.back-to-week-view {
+  font-size: 1.5vw;
+  width: auto;
+  margin-left: 2vw;
+  padding: 5px 25px;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid #008cba;
+  box-sizing: border-box;
+  margin-top: 1vw;
+}
+
+.back-to-week-view:hover {
+  background-color: rgb(38, 189, 239);
+  border-color: rgb(38, 189, 239);
+  color: white;
+}
+
+.day-view-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#spacer {
+  margin-right: 2vw;
+}
+
+.week-icon, .log-out-icon {
+  width: 2vw;
+  height: 2vw;
+}
+
+.sidebar-heading {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.log-out-icon {
+  margin-top: 3vh;
+  background-color: #ed2939cc;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.log-out-icon:hover {
+  background-color: #ed2939ff;
+}
+

@@ -1,7 +1,19 @@
 
 
 
-const mondayDishes = [
+const fridayDishes = [
+  {
+    imageURL: "<img class=\"food-image\" alt=\"salat\" src=\"resources\\monday_images\\salat.jpeg\">",
+    name:"Italienischer Salat",
+    Filter: ["Meine Vorlieben", "Vegetarisch", "Glutenfrei"],
+    FilterIcons: [
+      "<img class=\"icon\" alt=\"vegetarian icon\" src=\"resources\\icons\\vegetarian.png\">",
+      "<img class=\"icon\" alt=\"dairy icon\" src=\"resources\\icons\\dairy-products.png\">",
+      "<img class=\"icon\" alt=\"nut icon\" src=\"resources\\icons\\nut.png\">"
+    ],
+    rating: "74%",
+    price: "1,50€"
+  },
   {
     imageURL: "<img class=\"food-image\" alt=\"curry\" src=\"resources\\monday_images\\curry.jpeg\">",
     name: "Tofu Curry mit Reis",
@@ -56,17 +68,5 @@ const mondayDishes = [
     ],
     rating: "87%",
     price: "4,00€"
-  },
-  {
-    imageURL: "<img class=\"food-image\" alt=\"salat\" src=\"resources\\monday_images\\salat.jpeg\">",
-    name:"Italienischer Salat",
-    Filter: ["Meine Vorlieben", "Vegetarisch", "Glutenfrei"],
-    FilterIcons: [
-      "<img class=\"icon\" alt=\"vegetarian icon\" src=\"resources\\icons\\vegetarian.png\">",
-      "<img class=\"icon\" alt=\"dairy icon\" src=\"resources\\icons\\dairy-products.png\">",
-      "<img class=\"icon\" alt=\"nut icon\" src=\"resources\\icons\\nut.png\">"
-    ],
-    rating: "74%",
-    price: "1,50€"
   }
 ]

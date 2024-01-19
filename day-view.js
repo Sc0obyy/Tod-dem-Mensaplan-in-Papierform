@@ -145,6 +145,8 @@ function getDishedDay(day) {
       return wednesdayDishes;
     case "Donnerstag":
       return thursdayDishes;
+    case "Freitag":
+      return fridayDishes;
     default:
       return;
   }
@@ -178,6 +180,14 @@ function renderCards(day) {
   })
 }
 
+function setWidth() {
+  var one = document.getElementById("top-left");
+  var two = document.getElementById("spacer");
+  style = window.getComputedStyle(one);
+  wdt = style.getPropertyValue('width');
+  two.style.width = wdt;
+  console.log(wdt)
+}
 
-
+setWidth()
 

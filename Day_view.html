@@ -18,10 +18,18 @@
     <!-- <div class="flex_main_rows"> -->
     <div class="sidebar_flex_column">
 
-      <div class="sidebar_c_name">
-        <p class="sidebar-name">Stefanie</p>
-        <p class="sidebar-role">Studentin</p>
+      <div class="sidebar-heading">
+        <span class="log-out-button">
+          <a href="scan_screen.html">
+            <img class="log-out-icon" src="resources/icons/log_out.png">
+          </a>
+        </span>
+        <div class="sidebar_c_name">
+          <p class="sidebar-name">Stefanie</p>
+          <p class="sidebar-role">Studentin</p>
+        </div>
       </div>
+      
 
       <div class="sidebar_pref" onclick="open_pref()">
         <p class="sidebar-headings">Vorlieben</p>
@@ -85,17 +93,26 @@
     </div>
   </div>
   <div class="main-body">
-    <div class="day-selection">
-      <button onclick="displayDropdown('day-selection-dropdown')" id="day-selector-button"
-        class="day-selector-button dropdown-button">Montag</button>
-      <div id="day-selection-dropdown" class="day-selection-dropdown">
-        <button onclick="displayDay('Montag')">Montag</button>
-        <button onclick="displayDay('Dienstag')">Dienstag</button>
-        <button onclick="displayDay('Mittwoch')">Mittwoch</button>
-        <button onclick="displayDay('Donnerstag')">Donnerstag</button>
-        <button onclick="displayDay('Freitag')">Freitag</button>
+    <span class="day-view-header">
+      <a href="Week_view.html"  >
+        <button id="top-left" class="back-to-week-view">
+          <img class="week-icon" src="resources/icons/week.png">
+        </button>
+      </a>
+      <div class="day-selection top-center">
+        <button onclick="displayDropdown('day-selection-dropdown')" id="day-selector-button"
+          class="day-selector-button dropdown-button">Montag</button>
+        <div id="day-selection-dropdown" class="day-selection-dropdown">
+          <button onclick="displayDay('Montag')">Montag</button>
+          <button onclick="displayDay('Dienstag')">Dienstag</button>
+          <button onclick="displayDay('Mittwoch')">Mittwoch</button>
+          <button onclick="displayDay('Donnerstag')">Donnerstag</button>
+          <button onclick="displayDay('Freitag')">Freitag</button>
+        </div>
       </div>
-    </div>
+      <span id="spacer"></span>
+    </span>
+    
     <div class="filter-bar">
       <div>
         <button onclick="displayDropdown('filter-selection-dropdown')" class="filter-selector dropdown-button">Select
