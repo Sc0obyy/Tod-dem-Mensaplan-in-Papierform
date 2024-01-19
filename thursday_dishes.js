@@ -2,7 +2,6 @@
 
 
 const thursdayDishes = [
-  {
    {
     imageURL: "<img class=\"food-image\" alt=\"nudeln\" src=\"resources\\thursday_images\\nudeln.jpeg\">",
     name: "Nulden mit Tomatensauce",
@@ -37,7 +36,7 @@ const thursdayDishes = [
     price: "4,95€"
   },
   {
-    imageURL: "<img class=\"food-image\" alt=\"weiße Schokolade Pudding\" src=\"resources\\thursday_images\\weiße_schokolade_pudding.jpeg\">",
+    imageURL: "<img class=\"food-image\" alt=\"weiße Schokolade Pudding\" src=\"resources\\thursday_images\\pudding.jpeg\">",
     name: "Weiße Schokolade Pudding mit Orangen",
     Filter: ["Vegetarisch", "Keine Nüsse", "Glutenfrei"],
     FilterIcons: [

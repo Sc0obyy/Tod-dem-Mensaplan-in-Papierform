@@ -141,6 +141,10 @@ function getDishedDay(day) {
       return mondayDishes;
     case "Dienstag":
       return tuesdayDishes;
+    case "Mittwoch":
+      return wednesdayDishes;
+    case "Donnerstag":
+      return thursdayDishes;
     default:
       return;
   }

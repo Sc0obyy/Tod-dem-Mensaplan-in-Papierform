@@ -1,7 +1,5 @@
 
-
-
-const wendsdayDishes = [
+const wednesdayDishes = [
   {
     imageURL: "<img class=\"food-image\" alt=\"curry\" src=\"resources\\wednesday_images\\tortellini_auflauf.jpeg\">",
     name: "Mediterraner Tortelliniauflauf, Tomatensauce ",
