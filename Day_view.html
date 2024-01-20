@@ -16,81 +16,86 @@
 <body>
   <div id="sidebar" class="sidebar">
     <!-- <div class="flex_main_rows"> -->
-    <div class="sidebar_flex_column">
+      <div class="sidebar_flex_column">
 
-      <div class="sidebar-heading">
-        <span class="log-out-button">
-          <a href="scan_screen.html">
-            <img class="log-out-icon" src="resources/icons/log_out.png">
-          </a>
-        </span>
-        <div class="sidebar_c_name">
-          <p class="sidebar-name">Stefanie</p>
-          <p class="sidebar-role">Studentin</p>
-        </div>
-      </div>
-      
-
-      <div class="sidebar_pref" onclick="open_pref()">
-        <p class="sidebar-headings">Vorlieben</p>
-        <div class="sidebar-pref-preview">
-          <ul id="sidebar-preferences-list" class="sidebar-preferences-list">
-          </ul>
-        </div>
-      </div>
-
-      <div class="sidebar_bal">
-        <div class="sidebar_bal_head_button">
-          <p class="sidebar-saldo-text">Saldo</p>
-          <button onclick="open_bal()" class="sidebar_bal_head_button_plus">+</button>
-        </div>
-        <div class="sidebar_bal_display">
-          <p id="saldo" class="saldo"></p>
-        </div>
-      </div>
-
-
-      <div class="sidebar_lang">
-        <input type="image" src="resources/flag_de.png">
-      </div>
-      
-    </div>
-
-    <div class="sidebar_overlay_bal" id="sidebar_overlay_bal">
-      <div class="sidebar_popup_bal">
-        <div>
-          <button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
-          <h1 class="sidebar_popup_bal_flex">Konto aufladen</h1>
-          <div class="sidebar_popup_bal_flex_choices">
-            <button onclick="addFunds(5)" class="sidebar_popup_bal_flex_button"> 5€</button>
-            <button onclick="addFunds(10)" class="sidebar_popup_bal_flex_button"> 10€</button>
-            <button onclick="addFunds(20)" class="sidebar_popup_bal_flex_button"> 20€</button>
+        <div class="sidebar-heading">
+          <span class="log-out-button">
+            <a href="scan_screen.html">
+              <img class="log-out-icon" src="resources/icons/log_out.png">
+            </a>
+          </span>
+          <div class="sidebar_c_name">
+            <p class="sidebar-name">Stefanie</p>
+            <p class="sidebar-role">Studentin</p>
           </div>
-          <img src="resources/scan_pic.jpg" class="sidebar_popup_bal_flex">
         </div>
-      </div>
-    </div>
-
-
-    <div class="sidebar_overlay_pref" id="sidebar_overlay_pref">
-      <div class="sidebar_popup_pref">
-        <div>
-          <button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
-          <h1 class="sidebar_popup_bal_flex">Vorlieben</h1>
-          <div class="sidebar_popup_pref_preview">
-            <ul class="sidebar-popup-pref-list">
-              <li><button onclick="addToArray('Keine Nüsse')">Keine Nüsse</button></li>
-              <li><button onclick="addToArray('Vegan')">Vegan</button></li>
-              <li><button onclick="addToArray('Vegetarisch')">Vegetarisch</button></li>
-              <li><button onclick="addToArray('Glutenfrei')">Glutenfrei</button></li>
-              <li><button onclick="addToArray('Laktosefrei')">Laktosefrei</button></li>
-              <li><button onclick="addToArray('High Protein')">High Protein</button></li>
-              <li><button onclick="addToArray('Mit Fleisch')">Mit Fleisch</button></li>
+    
+        <div class="sidebar_pref" onclick="open_pref()">
+          <p class="sidebar-headings">Vorlieben</p>
+          <div class="sidebar-pref-preview">
+            <ul id="sidebar-preferences-list" class="sidebar-preferences-list">
             </ul>
           </div>
         </div>
+    
+        <div class="sidebar_bal">
+          <div class="sidebar_bal_head_button">
+            <p class="sidebar-saldo-text">Saldo</p>
+            <button onclick="open_bal()" class="sidebar_bal_head_button_plus">+</button>
+          </div>
+          <div class="sidebar_bal_display">
+            <p id="saldo" class="saldo"></p>
+          </div>
+        </div>
+    
+    
+        <div class="sidebar_lang">
+          <input type="image" src="resources/flag_de.png">
+        </div>
+    
       </div>
-    </div>
+    
+      <div class="sidebar_overlay_bal" id="sidebar_overlay_bal">
+        <div class="sidebar_popup_bal">
+          <div>
+            <button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
+            <h1 class="sidebar_popup_bal_flex">Konto aufladen</h1>
+            <div class="sidebar_popup_bal_flex_choices">
+              <button onclick="addFunds(5)" class="sidebar_popup_bal_flex_button"> 5€</button>
+              <button onclick="addFunds(10)" class="sidebar_popup_bal_flex_button"> 10€</button>
+              <button onclick="addFunds(20)" class="sidebar_popup_bal_flex_button"> 20€</button>
+            </div>
+            <img src="resources/scan_pic.jpg" class="sidebar_popup_bal_flex">
+          </div>
+        </div>
+      </div>
+    
+    
+      <div class="sidebar_overlay_pref" id="sidebar_overlay_pref">
+        <div class="sidebar_popup_pref">
+          <div>
+            <button onclick="closePopup()" class="sidebar_popup_bal_flex_button_x">X</button>
+            <h1 class="sidebar_popup_bal_flex">Vorlieben</h1>
+            <div class="sidebar_popup_pref_preview">
+              <div class="active-filters">
+                <h4>Aktiv</h4>
+                <ul id="filter-selection-list" class="filter-selection-list">
+                </ul>
+              </div>
+              <ul class="sidebar-popup-pref-list">
+                <li><button class="filter-list-button" onclick="addToArray('Keine Nüsse')">Keine Nüsse</button></li>
+                <li><button class="filter-list-button" onclick="addToArray('Vegan')">Vegan</button></li>
+                <li><button class="filter-list-button" onclick="addToArray('Vegetarisch')">Vegetarisch</button></li>
+                <li><button class="filter-list-button" onclick="addToArray('Glutenfrei')">Glutenfrei</button></li>
+                <li><button class="filter-list-button" onclick="addToArray('Laktosefrei')">Laktosefrei</button></li>
+                <li><button class="filter-list-button" onclick="addToArray('High Protein')">High Protein</button></li>
+                <li><button class="filter-list-button" onclick="addToArray('Mit Fleisch')">Mit Fleisch</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
   </div>
   <div class="main-body">
     <span class="day-view-header">

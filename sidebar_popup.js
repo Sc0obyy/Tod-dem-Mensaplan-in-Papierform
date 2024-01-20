@@ -28,24 +28,52 @@ function addToArray(filter) {
   drawFilters();
 }
 
+// function eraseFilters() {
+//   var myList = document.getElementById("sidebar-preferences-list");
+//   myList.querySelectorAll('li').forEach(function (item) {
+//       item.remove();
+//   })
+// }
+
 function eraseFilters() {
-  var myList = document.getElementById("sidebar-preferences-list");
-  myList.querySelectorAll('li').forEach(function (item) {
+  var myLists = [
+    document.getElementById("filter-selection-list"),
+    document.getElementById("sidebar-preferences-list")
+  ]
+
+  myLists.forEach(e => {
+    e.querySelectorAll('li').forEach(function (item) {
       item.remove();
+    })
   })
 }
 
+// function drawFilters() {
+//   var myList = document.getElementById("sidebar-preferences-list");
+//   var arr = JSON.parse(localStorage.getItem("filters"));
+//   for (let i = 0; i < arr.length; i++) {
+//     const node = document.createElement("li");
+//     const textNode = document.createTextNode(arr[i]);
+//     node.appendChild(textNode);
+//     myList.appendChild(node);
+//   }
+// }
+
 function drawFilters() {
-  var myList = document.getElementById("sidebar-preferences-list");
+  var myLists = [
+    document.getElementById("filter-selection-list"),
+    document.getElementById("sidebar-preferences-list")
+  ]
   var arr = JSON.parse(localStorage.getItem("filters"));
-  for (let i = 0; i < arr.length; i++) {
-    const node = document.createElement("li");
-    const textNode = document.createTextNode(arr[i]);
-    node.appendChild(textNode);
-    myList.appendChild(node);
-    console.log(arr[i])
-  }
-  console.log(arr)
+
+  for (let j = 0; j < myLists.length; j++) {
+    for (let i = 0; i < arr.length; i++) {
+      const node = document.createElement("li");
+      const textNode = document.createTextNode(arr[i]);
+      node.appendChild(textNode);
+      myLists[j].appendChild(node);
+    }
+  } 
 }
 
 var saldo = 5.26;

@@ -186,10 +186,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
  }
 
  .sidebar-popup-pref-list > li {
-  width: 20vw;
+  width: 10vw;
   display: flex;
   justify-content: center;
   padding: 1vh;
@@ -220,4 +221,42 @@
 
 .log-out-icon:hover {
   background-color: #ed2939ff;
+}
+
+.filter-list-button {
+  font-size: 1vw;
+  width: auto;
+  margin-left: 2vw;
+  padding: 5px 25px;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid #008cba;
+  box-sizing: border-box;
+}
+
+.filter-list-button:hover {
+  background-color: rgb(38, 189, 239);
+  border-color: rgb(38, 189, 239);
+  color: white;
+}
+
+.active-filters {
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-selecion-list {
+  font-size: 0.9vw;
+
 }
