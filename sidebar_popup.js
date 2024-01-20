@@ -76,13 +76,16 @@ function drawFilters() {
   } 
 }
 
-var saldo = 5.26;
-document.getElementById("saldo").innerHTML = saldo;
+
+document.getElementById("saldo").innerHTML = localStorage.getItem("saldo");
 
 // adds funds to current balance
 function addFunds(amount) {
-  saldo += amount;
-  saldo.toFixed(2);
-  document.getElementById("saldo").innerHTML = saldo;
+  var sal = localStorage.getItem("saldo");
+  sal = parseFloat(sal);
+  sal += amount;
+  sal = Math.round(sal * 100) / 100;
+  localStorage.setItem("saldo", sal);
+  document.getElementById("saldo").innerHTML = localStorage.getItem("saldo");
   closePopup();
 }
