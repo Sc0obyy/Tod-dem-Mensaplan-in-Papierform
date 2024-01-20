@@ -1,10 +1,12 @@
 var filterArray = [];
-var currentDay = "Montag";
+var currentDay = localStorage.getItem("currDay");
 var globalCustomFilterSelected = false;
+var dayIndex = 0;
 
 // renders all cards when page is loaded
 window.onload = function () {
   renderCards(currentDay);
+  displayDay(currentDay);
 }
 
 // display a dropdown, select with id
@@ -41,6 +43,7 @@ function displayDay(day) {
   currentDay = day;
   renderCards(currentDay);
 }
+
 
 // add or remove a filter to/from filter array, check if filter is "meine Vorlieben"
 // if filter is "meine Vorlieben" then add/remove all vorlieben to filter array
@@ -112,9 +115,8 @@ function addIconList(arr) {
 // create card with dish properties
 function createCard(dish) {
   const cardContainer = document.getElementById("dishes-list");
-
   cardContainer.innerHTML += `
-  <li id="${dish.name}" class="dish-card">
+  <li onclick="goToDetailView('${dish.name}')" id="${dish.name}" class="dish-card">
     <div class="card-image">
       ${dish.imageURL}
     </div>
@@ -134,18 +136,39 @@ function createCard(dish) {
   </li>
   `
 }
+
+function goToDetailView(name) {
+  const index = getPosition(name);
+  localStorage.setItem("day", dayIndex)
+  localStorage.setItem("index", index)
+  window.location.href = "detail_view.html"
+}
+
+
+
+function getPosition(name) {
+  const day = getDishedDay(currentDay);
+  const index = day.findIndex(x => x.name === `${name}`)
+  return index;
+}
+
  // gets all dishes for specific day
 function getDishedDay(day) {
   switch (day) {
     case "Montag":
+      dayIndex = 0;
       return mondayDishes;
     case "Dienstag":
+      dayIndex = 1;
       return tuesdayDishes;
     case "Mittwoch":
+      dayIndex = 2;
       return wednesdayDishes;
     case "Donnerstag":
+      dayIndex = 3;
       return thursdayDishes;
     case "Freitag":
+      dayIndex = 4;
       return fridayDishes;
     default:
       return;
@@ -190,4 +213,8 @@ function setWidth() {
 }
 
 setWidth()
+
+function test() {
+  console.log(localStorage.getItem("currDay"));
+}
 

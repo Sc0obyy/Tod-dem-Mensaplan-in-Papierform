@@ -1,6 +1,9 @@
+var currDay;
+
 // go back to last view
 function goBack() {
-    window.history.back();
+  localStorage.setItem("currDay", currDay);
+  window.history.back();
 }
 
 // set day depending on given int
@@ -9,6 +12,28 @@ function convertIntToDay(day){
         return mondayDishes
     } else
     return tuesdayDishes
+}
+
+function convertIntToDay(day) {
+  switch (day) {
+    case '0':
+      currDay = "Montag";
+      return mondayDishes;
+    case '1':
+      currDay = "Dienstag";
+      return tuesdayDishes;
+    case '2':
+      currDay = "Mittwoch";
+      return wednesdayDishes;
+    case '3':
+      currDay = "Donnerstag";
+      return thursdayDishes;
+    case '4':
+      currDay = "Freitag";
+      return fridayDishes;
+    default:
+      console.log("fehler");
+  }
 }
 
 // create card with info on a dish

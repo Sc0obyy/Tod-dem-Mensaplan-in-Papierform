@@ -1,6 +1,7 @@
 // adds dish card with given dish, id, index and current day
 function addDish(dish, id, index, currentDay) {
     const dishContainer = document.getElementById(id)
+    console.log(dish.name, index)
     dishContainer.innerHTML += `
     <li class="dish-card">     
         <button class="dish-card-image" onclick="seeInfo('${currentDay}', '${index}')">
@@ -40,3 +41,7 @@ renderDishes(tuesdayDishes, "tuesday-dishes")
 renderDishes(mondayDishes, "wednesday-dishes")
 renderDishes(tuesdayDishes, "thursday-dishes")
 renderDishes(mondayDishes, "friday-dishes")
+
+function setDay(day) {
+  localStorage.setItem("currDay", day);
+}

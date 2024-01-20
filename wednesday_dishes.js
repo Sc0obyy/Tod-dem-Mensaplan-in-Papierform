@@ -42,12 +42,11 @@ const wednesdayDishes = [
   },
   {
     imageURL: "<img class=\"food-image\" alt=\"curry\" src=\"resources\\wednesday_images\\mccheese_burger.jpeg\">",
-    name: "Mac'n'cheese Burger, Kartoffeltwister, Cocktailsauce ",
+    name: "Mac`n`cheese Burger, Kartoffeltwister, Cocktailsauce ",
     Filter: ["Meine Vorlieben","Keine Nüsse","Mit Fleisch"],
     FilterIcons: [
     "<img class=\"icon\" alt=\"dairy icon\" src=\"resources\\icons\\dairy-products.png\">",
     "<img class=\"icon\" alt=\"pork icon\" src=\"resources\\icons\\pig.png\">"
-    
     ],
     rating: "89%",
     price: "4,00€"
