@@ -114,6 +114,18 @@ function addIconList(arr) {
   return string
 }
 
+function checkRole(price) {
+  if (localStorage.getItem("role") === 'guest') {
+    let char = (parseInt(Array.from(price)[0]) + 1).toString();
+    var myArr = price.split("");
+    myArr[0] = char
+    var newPrice = myArr.join('');
+    return newPrice;
+  } else {
+    return price;
+  }
+}
+
 // create card with dish properties
 function createCard(dish) {
   const cardContainer = document.getElementById("dishes-list");
@@ -132,7 +144,7 @@ function createCard(dish) {
           <img class="rating-icon" alt="thumbs up icon" src="resources\\icons\\thumbs-up.png">
           <p>${dish.rating}</p>
         </div>
-        <p class="card-dish-preis">${dish.price}</p>
+        <p class="card-dish-preis">${checkRole(dish.price)}</p>
       </div>
     </div>
   </li>

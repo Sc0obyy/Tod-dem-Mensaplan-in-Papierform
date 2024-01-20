@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
   <meta charset="UTF-8">
-<link rel="stylesheet" href="scan_screen.css">
-<script>
-  var s = 5.25
-  localStorage.setItem("saldo", s)
-</script>
+  <link rel="stylesheet" href="scan_screen.css">
+  <script>
+    var s = 5.25
+    localStorage.setItem("saldo", s)
+
+    function setRole(role) {
+      localStorage.setItem("role", role);
+    }
+  </script>
 </head>
 
 <body>
-	<div class="flex_main_column">
-		<div class="start_heading">
-			Mensapoint
-		</div>
-	
-		<div class="start_login">
-			<div class="start_login_scan"> </a>
-				<h1>Leibniz Card</h1>
-				<a href="Week_view.html">  <img src="resources/scan_pic.jpg"> </a>
-			</div>
-			<div class="start_login_guest">
-				<h1>Gast</h1>
-			</div>
-		</div>
-			<div class="spacer">	</div>
-		
-	</div>
-	
+  <div class="flex_main_column">
+    <div class="start_heading">
+      Mensapoint
+    </div>
+
+    <div class="start_login">
+      <div class="start_login_scan"> </a>
+        <h1>Leibniz Card</h1>
+        <a href="Week_view.html"> <img onclick="setRole('student')" src="resources/scan_pic.jpg"> </a>
+      </div>
+      <div class="start_login_guest">
+        <a class="fill-div" onclick="setRole('guest')" href="Week_view.html">
+          <h1>Gast</h1>
+        </a>
+      </div>
+    </div>
+    <div class="spacer"> </div>
+
+  </div>
+
 </body>
 
 </html>

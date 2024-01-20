@@ -2,10 +2,21 @@ window.onload = function() {
   drawFilters();
 }
 
+function checkRole(price) {
+  if (localStorage.getItem("role") === 'guest') {
+    let char = (parseInt(Array.from(price)[0]) + 1).toString();
+    var myArr = price.split("");
+    myArr[0] = char
+    var newPrice = myArr.join('');
+    return newPrice;
+  } else {
+    return price;
+  }
+}
+
 // adds dish card with given dish, id, index and current day
 function addDish(dish, id, index, currentDay) {
     const dishContainer = document.getElementById(id)
-    console.log(dish.name, index)
     dishContainer.innerHTML += `
     <li class="dish-card">     
         <button class="dish-card-image" onclick="seeInfo('${currentDay}', '${index}')">
@@ -14,7 +25,7 @@ function addDish(dish, id, index, currentDay) {
         <div class="dish-name">${dish.name}</div>
         <div class="dish-information">
             <div class="dish-rating">${dish.rating}</div>
-            <div class="dish-price">${dish.price}</div>
+            <div class="dish-price">${checkRole(dish.price)}</div>
         </div>
     </li>
     `
