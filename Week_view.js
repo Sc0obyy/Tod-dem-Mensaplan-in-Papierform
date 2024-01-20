@@ -1,3 +1,7 @@
+window.onload = function() {
+  drawFilters();
+}
+
 // adds dish card with given dish, id, index and current day
 function addDish(dish, id, index, currentDay) {
     const dishContainer = document.getElementById(id)

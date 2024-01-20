@@ -1,5 +1,9 @@
 var currDay;
 
+window.onload = function() {
+  drawFilters();
+}
+
 // go back to last view
 function goBack() {
   localStorage.setItem("currDay", currDay);

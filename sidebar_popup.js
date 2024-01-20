@@ -14,29 +14,38 @@ function closePopup() {
   document.getElementById('sidebar_overlay_pref').style.display = 'none';
 }
 
-// add filter to sidebar list 
-function addToArray(filter, element) {
-  var myList = document.getElementById("sidebar-preferences-list");
-  if (element.checked) {
-    if (!globalFilterArray.includes(filter)) {
-      globalFilterArray.push(filter);
-      const node = document.createElement("li");
-      const textNode = document.createTextNode(filter);
-      node.appendChild(textNode);
-      myList.appendChild(node);
-    }
-  } else {
-    var index = globalFilterArray.indexOf(filter);
-    globalFilterArray.splice(index, 1);
-    myList.querySelectorAll('li').forEach(function (item) {
-      if (item.innerHTML === filter) {
-        item.remove();
-      }
-    })
+function addToArray(filter) {
+  var arr = JSON.parse(localStorage.getItem("filters"));
+  if (!arr.includes(filter)) {
+    arr.push(filter);
   }
-  addFilter(filter);
-  addFilter("Meine Vorlieben")
-  addFilter("Meine Vorlieben")
+  else {
+    var index = arr.indexOf(filter);
+    arr.splice(index, 1);
+  }
+  localStorage.setItem("filters", JSON.stringify(arr));
+  eraseFilters();
+  drawFilters();
+}
+
+function eraseFilters() {
+  var myList = document.getElementById("sidebar-preferences-list");
+  myList.querySelectorAll('li').forEach(function (item) {
+      item.remove();
+  })
+}
+
+function drawFilters() {
+  var myList = document.getElementById("sidebar-preferences-list");
+  var arr = JSON.parse(localStorage.getItem("filters"));
+  for (let i = 0; i < arr.length; i++) {
+    const node = document.createElement("li");
+    const textNode = document.createTextNode(arr[i]);
+    node.appendChild(textNode);
+    myList.appendChild(node);
+    console.log(arr[i])
+  }
+  console.log(arr)
 }
 
 var saldo = 5.26;

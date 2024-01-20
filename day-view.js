@@ -7,6 +7,8 @@ var dayIndex = 0;
 window.onload = function () {
   renderCards(currentDay);
   displayDay(currentDay);
+  drawFilters();
+
 }
 
 // display a dropdown, select with id
@@ -52,7 +54,7 @@ function addFilter(filter) {
 
   if (!filterArray.includes(filter)) {
     if (filter === "Meine Vorlieben") {
-      globalFilterArray.forEach(f => {
+      JSON.parse(localStorage.getItem("filters")).forEach(f => {
         if (!filterArray.includes(f)) {
           addFilterToArray(f, myList);
         }
@@ -61,7 +63,7 @@ function addFilter(filter) {
     addFilterToArray(filter, myList)
   } else {
     if (filter === "Meine Vorlieben") {
-      globalFilterArray.forEach(f => {
+      JSON.parse(localStorage.getItem("filters")).forEach(f => {
         if (filterArray.includes(f)) {
           removeFilterFromArray(f, myList);
         }
