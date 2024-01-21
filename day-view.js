@@ -8,7 +8,14 @@ window.onload = function () {
   renderCards(currentDay);
   displayDay(currentDay);
   drawFilters();
-
+  var role;
+  if (localStorage.getItem("role") === "student") {
+    role = "Student/-in";
+  }
+  else {
+    role = "Gast";
+  }
+  document.getElementById("sidebar-role").innerHTML = role;
 }
 
 // display a dropdown, select with id
@@ -166,7 +173,7 @@ function getPosition(name) {
   return index;
 }
 
- // gets all dishes for specific day
+// gets all dishes for specific day
 function getDishedDay(day) {
   switch (day) {
     case "Montag":

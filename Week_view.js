@@ -1,5 +1,13 @@
-window.onload = function() {
+window.onload = function () {
   drawFilters();
+  var role;
+  if (localStorage.getItem("role") === "student") {
+    role = "Student/-in";
+  }
+  else {
+    role = "Gast";
+  }
+  document.getElementById("sidebar-role").innerHTML = role;
 }
 
 function checkRole(price) {
@@ -16,8 +24,8 @@ function checkRole(price) {
 
 // adds dish card with given dish, id, index and current day
 function addDish(dish, id, index, currentDay) {
-    const dishContainer = document.getElementById(id)
-    dishContainer.innerHTML += `
+  const dishContainer = document.getElementById(id)
+  dishContainer.innerHTML += `
     <li class="dish-card">     
         <button class="dish-card-image" onclick="seeInfo('${currentDay}', '${index}')">
             ${dish.imageURL}
@@ -35,19 +43,19 @@ var currentDay = 0
 
 // got to detail view
 function seeInfo(day, index) {
-    localStorage.setItem("day", day)
-    localStorage.setItem("index", index)
-    window.location.href = "detail_view.html"
+  localStorage.setItem("day", day)
+  localStorage.setItem("index", index)
+  window.location.href = "detail_view.html"
 }
 
 // renders all dishes
-function renderDishes(dayDishes,id) {
-    index = 0
-    dayDishes.forEach(e =>{
-        addDish(e, id, index, currentDay);
-        index += 1
-    })
-    currentDay += 1
+function renderDishes(dayDishes, id) {
+  index = 0
+  dayDishes.forEach(e => {
+    addDish(e, id, index, currentDay);
+    index += 1
+  })
+  currentDay += 1
 }
 
 // set dishes for the week

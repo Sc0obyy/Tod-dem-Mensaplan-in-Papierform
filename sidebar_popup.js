@@ -89,3 +89,4 @@ function addFunds(amount) {
   document.getElementById("saldo").innerHTML = localStorage.getItem("saldo");
   closePopup();
 }
+
