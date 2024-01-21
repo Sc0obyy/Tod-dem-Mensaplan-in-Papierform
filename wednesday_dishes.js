@@ -14,8 +14,9 @@ const wednesdayDishes = [
   {
     imageURL: "<img class=\"food-image\" alt=\"curry\" src=\"resources\\wednesday_images\\backfisch.jpeg\">",
     name: "Backfisch, Brokkoli, Gurken-Dill-Dip, Rosmarinkartoffeln ",
-    Filter: ["Meine Vorlieben","Keine Nüsse","Laktosefrei"],
+    Filter: ["Meine Vorlieben","Keine Nüsse","Laktosefrei", "Mit Fisch"],
     FilterIcons: [
+      "<img class=\"icon\" alt=\"fisch icon\" src=\"resources\\icons\\fisch.png\">"
     ],
     rating: "68%",
     price: "3,20€"
