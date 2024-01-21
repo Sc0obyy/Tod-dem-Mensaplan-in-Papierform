@@ -28,12 +28,6 @@ function addToArray(filter) {
   drawFilters();
 }
 
-// function eraseFilters() {
-//   var myList = document.getElementById("sidebar-preferences-list");
-//   myList.querySelectorAll('li').forEach(function (item) {
-//       item.remove();
-//   })
-// }
 
 function eraseFilters() {
   var myLists = [

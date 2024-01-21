@@ -11,13 +11,22 @@
     function setRole(role) {
       localStorage.setItem("role", role);
     }
+
+    function openInformation() {
+      document.getElementById("info-popup").style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById("info-popup").style.display = 'none';
+    }
   </script>
 </head>
 
 <body>
   <div class="flex_main_column">
     <div class="start_heading">
-      Mensapoint
+      <p>Mensapoint</p>
+      <img onclick="openInformation()" class="info-icon" alt="info-icon" src="resources/icons/information.png">
     </div>
 
     <div class="start_login">
@@ -32,7 +41,33 @@
       </div>
     </div>
     <div class="spacer"> </div>
+  </div>
 
+
+
+
+
+  <div id="info-popup" class="info-popup">
+    <div class="info-popup-content">
+      <button onclick="closePopup()" class="info-popup-close">X</button>
+      <div class="info-heading">
+        <h3>Informationen</h3>
+      </div>
+
+      <div class="info-display">
+        <ul>
+          <li>
+            Als Gast oder ohne Leibnizcard, benutze die Gast Funktion.
+          </li>
+          <li>
+            Wenn du eine Leibnizcard oder Mensacard hast, dann scanne diese.
+          </li>
+          <li>
+            Du kannst Vorlieben auf der Karte speichern, oder Geld auf diese laden.
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
 </body>
