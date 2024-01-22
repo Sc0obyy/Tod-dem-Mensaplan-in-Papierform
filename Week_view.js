@@ -61,9 +61,9 @@ function renderDishes(dayDishes, id) {
 // set dishes for the week
 renderDishes(mondayDishes, "monday-dishes")
 renderDishes(tuesdayDishes, "tuesday-dishes")
-renderDishes(mondayDishes, "wednesday-dishes")
-renderDishes(tuesdayDishes, "thursday-dishes")
-renderDishes(mondayDishes, "friday-dishes")
+renderDishes(wednesdayDishes, "wednesday-dishes")
+renderDishes(thursdayDishes, "thursday-dishes")
+renderDishes(fridayDishes, "friday-dishes")
 
 function setDay(day) {
   localStorage.setItem("currDay", day);
